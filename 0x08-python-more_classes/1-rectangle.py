@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-#1-rectangle.py
+# 1-rectangle.py
 
-"""A Rectangle class definition"""
+"""
+A Rectangle class definition
+"""
 
 
 class Rectangle:
     """ A class that represents a rectangle """
-    def __init__ (self, width=0, height=0):
+    def __init__(self, width=0, height=0):
         """rectangle initialization"""
         self.width = width
         self.height = height
