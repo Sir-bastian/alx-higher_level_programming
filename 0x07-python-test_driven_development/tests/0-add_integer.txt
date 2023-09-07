@@ -1,0 +1,30 @@
+The '0-add_integer' module
+==========================
+
+Using ''add_integer''
+---------------------
+
+First import add_integer from the 0-add_integer module
+	>>>add_integer = __import__('0-add_integer').add_integer
+	
+Checking for  regular addition
+	>>>add_integer(1, 2)
+	3
+
+Checking for addition with a positive and negative number
+	>>>add_integer(100, -2)
+	98
+
+Checking for addition when we only pass the 'a' argument
+	>>>add_integer(2)
+	100
+
+Checking for addition with a float and a negative
+	>>>add_integer(100.3, -2)
+	98
+
+Checking for addition with a non integer and non float
+	>>>add_integer(4, "School")
+	b must be an integer
+	>>>add_integer(None)
+	a must be an integer
