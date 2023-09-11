@@ -12,4 +12,3 @@ class MyList(list):
     def print_sorted(self):
         """Public instance that prints the list but sorted"""
         print(sorted(self))
-
