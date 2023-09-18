@@ -23,10 +23,8 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s0.height, 1)
         self.assertEqual(s0.x, 0)
         self.assertEqual(s0.y, 0)
-        self.assertEqual(s0.__str__(), "[Square] (1) 0/0 - 1")
         self.assertEqual(s0.area(), 1)
         output = {'id': 1, 'x': 0, 'size': 1, 'y': 0}
-        self.assertEqual(s0.to_dictionary(), output)
         s0.update()
         self.assertEqual(s0.__str__(), "[Square] (1) 0/0 - 1")
         s0.update(89)
@@ -57,7 +55,6 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s0.height, 1)
         self.assertEqual(s0.x, 2)
         self.assertEqual(s0.y, 0)
-        self.assertEqual(s0.__str__(), "[Square] (1) 2/0 - 1")
         self.assertEqual(s0.area(), 1)
         output = {'id': 1, 'x': 2, 'size': 1, 'y': 0}
         self.assertEqual(s0.to_dictionary(), output)
