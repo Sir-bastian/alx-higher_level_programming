@@ -13,4 +13,3 @@ class Square extends SquareBase {
     }
   }
 }
-
