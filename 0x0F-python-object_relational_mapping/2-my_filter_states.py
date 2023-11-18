@@ -12,8 +12,8 @@ if __name__ == '__main__':
                          searched_name=sys.argv[4])
 
     cur = db.cursor()
-    cur.execute("""SELECT * FROM states WHERE name
-                = '{}' ORDER BY id ASC""".format(searched_name))
+    cur.execute("""SELECT * FROM states WHERE name LIkE
+                BINARY '{}' ORDER BY id ASC""".format(searched_name))
     rows = cur.fetchall()
     for row in rows:
         print(row)
