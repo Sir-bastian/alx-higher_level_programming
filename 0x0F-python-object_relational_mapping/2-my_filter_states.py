@@ -6,10 +6,10 @@
 import MySQLdb
 import sys
 
-if __name__ =='__main__':
+if __name__ == '__main__':
     db = MySQL.connect("""host='localhost', port=3306,
                     user=sys.argv[1], passwd=sys.argv[2],
-                    databasename=sys.argv[3]""")
+                    db=sys.argv[3]""")
 
     cursor = db.cursor()
     cursor.execute(""" SELECT * FROM states WHERE name LIKE BINARY
@@ -17,7 +17,7 @@ if __name__ =='__main__':
 
     rows = cursor.fetchall()
     for state in rows:
-        print(row)
+        print(state)
 
     cursor.close()
     db.close()
