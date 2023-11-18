@@ -17,10 +17,10 @@ if __name__ == '__main__':
     cursor = db.cursor()
 
     state_name = sys.argv[4]
-    query = "SELECT * FROM states WHERE name = %s ORDER BY state.id ASC"
+    query = "SELECT * FROM states WHERE name = %s ORDER BY states.id ASC"
     cursor.execute(query, (state_name,))
 
-    results = cursor.fetchall
+    results = cursor.fetchall()
     for state in results:
         print(state)
 
