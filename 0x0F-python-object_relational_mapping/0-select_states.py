@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+
+""" A script that lists all states
+from the database hbtn_0e_0_usa """
+
 import MySQLdb
 import sys
 
@@ -8,6 +12,8 @@ if __name__ == '__main__':
     database_name = sys.argv[3]
 
     db = MySQLdb.connect(
+            host="localhost",
+            port="3306",
             user="my_username",
             passwd="my_password",
             database="database_name"
@@ -16,7 +22,7 @@ if __name__ == '__main__':
     cur = db.cursor()
     """ getting a cursor """
 
-    cur.excute("SELECT * FROM states ORDER BY states.id ASC")
+    cur.excute("SELECT * FROM states ORDER BY id ASC")
     """excute the SQL query to retrieve all the states and sort them
     states.id in Ascending order"""
 
