@@ -16,14 +16,14 @@ if __name__ == '__main__':
             database=sys.argv[3]
             )
 
-    cur = db.cursor()
-    cur.excute("SELECT * FROM states ORDER BY id ASC")
-    states = cur.fetchall()
+    cursor = db.cursor()
+    cursor.excute("SELECT * FROM states ORDER BY id ASC")
+    states = cursor.fetchall()
 
     """ Display all the rows returned by the query """
     for state in states:
         print(state)
 
     """ close the cursor and the connection """
-    cur.close()
+    cursor.close()
     db.close()
