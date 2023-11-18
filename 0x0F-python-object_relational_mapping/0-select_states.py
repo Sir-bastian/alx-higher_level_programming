@@ -9,7 +9,7 @@ import sys
 if __name__ == '__main__':
 
     db = MySQLdb.connect(
-            host="localhost",
+            host='localhost',
             port=3306,
             user=sys.argv[1],
             passwd=sys.argv[2],
@@ -17,14 +17,8 @@ if __name__ == '__main__':
             )
 
     cur = db.cursor()
-    """ getting a cursor """
-
     cur.excute("SELECT * FROM states ORDER BY id ASC")
-    """excute the SQL query to retrieve all the states and sort them
-    states.id in Ascending order"""
-
     rows = cur.fetchall()
-    """ Get all the rows returned by the query"""
 
     """ Display all the rows returned by the query """
     for state in states:
