@@ -18,7 +18,7 @@ if __name__ == '__main__':
 
     cur = db.cursor()
     cur.excute("SELECT * FROM states ORDER BY id ASC")
-    rows = cur.fetchall()
+    states = cur.fetchall()
 
     """ Display all the rows returned by the query """
     for state in states:
