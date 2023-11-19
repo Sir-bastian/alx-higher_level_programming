@@ -14,9 +14,10 @@ if __name__ == '__main__':
 
     query = f"""SELECT cities.name FROM cities
                 JOIN states ON cities.state_id = states.id
-                WHERE states.name LIKE BINARY '{state_name}'
+                WHERE states.name = %s
                 ORDER BY cities.id ASC"""
-    cursor.execute(query)
+
+    cursor.execute(query, (state_name,))
     results = cursor.fetchall()
 
     for result in results:
