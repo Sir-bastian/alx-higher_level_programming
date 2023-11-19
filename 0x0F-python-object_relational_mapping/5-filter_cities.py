@@ -20,8 +20,7 @@ if __name__ == '__main__':
     cursor.execute(query, (state_name,))
     results = cursor.fetchall()
 
-    for result in results:
-        print(result)
+    print(", ".join([city[0]for city in results]))
 
     cursor.close()
     db.close()
