@@ -10,9 +10,11 @@ if __name__ == '__main__':
     db = MySQLdb.connect(host=localhost, port=3306, user=sys.argv[1],
                          passwd=sys.argv[2], db=sys.argv[3])
     cursor = db.cursor()
-    arg = sys.argv[4]
+    state_name = sys.argv[4]
 
-    query =  """SELECT cities.name FROM states WHERE name = %s
+    query = f"""SELECT cities.name FROM cities
+                JOIN states ON cities.state_id = state.id
+                WHERE states.name = {state_name}
                 ORDER BY cities.id ASC"""
     cursor.execute(query, (state_name,))
     result = cursor.fetchall()
