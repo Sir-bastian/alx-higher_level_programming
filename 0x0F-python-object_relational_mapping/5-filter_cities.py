@@ -4,7 +4,7 @@ as an argument, and lists all cities of that
 state"""
 
 
-import MySQKdb
+import MySQLdb
 import sys
 if __name__ == '__main__':
     db = MySQLdb.connect(host=localhost, port=3306, user=sys.argv[1],
