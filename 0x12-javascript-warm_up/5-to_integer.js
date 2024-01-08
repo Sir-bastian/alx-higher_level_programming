@@ -1,10 +1,10 @@
 #!/usr/bin/node
 
 const argument = process.argv[2];
-const parsed_int = parseInt(argument);
+const parsedInt = parseInt(argument);
 
-if (Number.isInteger(parsed_int)) {
-  console.log('My number: ' + parsed_int);
+if (Number.isInteger(parsedInt)) {
+  console.log('My number: ' + parsedInt);
 } else {
   console.log('Not a number');
 }
