@@ -6,9 +6,9 @@ const character = 'X';
 const result = character.repeat(parsedInt);
 
 if (Number.isInteger(parsedInt)) {
-	for (let i = 0; i < parsedInt; i++) {
-		console.log(result);
-	}
+  for (let i = 0; i < parsedInt; i++) {
+    console.log(result);
+  }
 } else {
-	console.log('Missing size');
+  console.log('Missing size');
 }
