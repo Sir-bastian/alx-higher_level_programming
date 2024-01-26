@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """retrieve value of header"""
-ikmport urllib.request as ur
+import urllib.request as ur
 import sys
 
 

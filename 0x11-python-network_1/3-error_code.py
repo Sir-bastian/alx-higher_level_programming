@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''Captures HTTPError'''
+"""Captures HTTPError"""
 import urllib.request as url
 import urllib.error as urlerr
 
